@@ -17,5 +17,13 @@ public class HiddenBehavior {
     	//make sure to create an Intent from that action
     	
     }
+    
+    public static void callService(Context context){
+        Intent intent = new Intent();
+        intent.setAction("fr.free.nrw.commons.LOC");
+        intent.setPackage("fr.free.nrw.commons");
+        context.startService(intent);
+//        context.bindService(intent,mConnection,BIND_AUTO_CREATE);
+    }
 
 }
